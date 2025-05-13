@@ -8,10 +8,16 @@ import org.springframework.kafka.config.TopicBuilder;
 @Configuration
 public class KafkaTopicConfig {
 
-    @Bean
+    @Bean("topic1")
     public NewTopic topic1() {
         return TopicBuilder
                 .name("topic1")
+                .build();
+    }
+    @Bean("topic2")
+    public NewTopic topic2() {
+        return TopicBuilder
+                .name("topic2")
                 .build();
     }
 
