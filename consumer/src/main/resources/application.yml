@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: consumer
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: wikiGroup
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      properties:
+#        spring.json.trusted.packages:  '*' Not need it because we consume string messages
+
+server:
+  port: 8090
